@@ -1,8 +1,9 @@
 import React from "react"
 import axios from "axios"
+import ProductList from "../components/Index/ProductList"
 
-function Home(products) {
-  console.log("props", products)
+function Home({ products }) {
+  // console.log("props", products)
   // React.useEffect(() => {
   //   getProducts()
   // }, [])
@@ -13,7 +14,7 @@ function Home(products) {
   //   console.log("----------", response.data)
   // }
 
-  return <>home</>;
+  return <ProductList products={ products } />;
 }
 
 Home.getInitialProps = async () => {
