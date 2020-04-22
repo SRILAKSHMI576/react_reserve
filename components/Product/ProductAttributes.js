@@ -7,9 +7,9 @@ import { useRouter } from "next/router";
 function ProductAttributes({ description, _id, user }) {
   const [modal, setModal] = React.useState(false);
   const router = useRouter();
-  const isRoot = user && user.role === 'root'
-  const isAdmin = user && user.role === 'admin'
-  const isRootOrAdmin = isRoot || isAdmin
+  const isRoot = user && user.role === "root";
+  const isAdmin = user && user.role === "admin";
+  const isRootOrAdmin = isRoot || isAdmin;
 
   async function handleDelete() {
     const url = `${baseUrl}/api/product`;
@@ -43,7 +43,7 @@ function ProductAttributes({ description, _id, user }) {
                 labelPosition="right"
                 content="Delete"
                 onClick={handleDelete}
-             />
+              />
             </Modal.Actions>
           </Modal>
         </>
