@@ -5,7 +5,7 @@ const connection = {}
 async function connectDb(){
 	if(connection.isConnected){
 		//use existing database connection
-		console.log("Using existing connection")
+		// console.log("Using existing connection")
 		return;
 	}
 
@@ -16,7 +16,7 @@ async function connectDb(){
 		useNewUrlParser: true,
 		useUnifiedTopology: true
 	})
-	console.log("DB Connected")
+	// console.log("DB Connected")
 	connection.isConnected = db.connection
 }
 
